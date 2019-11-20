@@ -1,0 +1,23 @@
+{
+	"name": "com.ngc6543.omnievents",
+	"version": "0.1.0",
+	"displayName": "Omni Events",
+	"description": "ScriptableObject Events for Unity",
+	"unity": "2017.1",
+	"dependency":
+	{
+		
+	},
+
+	"keywords":
+	[
+		"Event",
+		"ScriptableObject"
+	],
+	
+	"author":
+	{
+		"name": "Chaehyeok Lim",
+		"email": "ngc6543@me.com"
+	}
+}
