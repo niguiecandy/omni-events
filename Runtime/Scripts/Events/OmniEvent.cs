@@ -16,7 +16,7 @@ namespace NGC6543.OmniEvents
 		public const string menuPath = "Omni Events/";
 		
 		//#if UNITY_EDITOR	//UNDONE this can cause Deserialization error!!
-		[SerializeField] string memo;
+		[SerializeField, TextArea(3, 6)] string memo;
 		//#endif
 		List<OmniEventListener> listeners = new List<OmniEventListener>();
 
@@ -44,7 +44,7 @@ namespace NGC6543.OmniEvents
 	public abstract class OmniEvent<T0> : ScriptableObject
 	{
 		//#if UNITY_EDITOR	//UNDONE this can cause Deserialization error!!
-		[SerializeField] string memo;
+		[SerializeField, TextArea(3, 6)] string memo;
 		[SerializeField] T0 parameterToSend;
 		//#endif
 		List<OmniEventListener<T0>> listeners = new List<OmniEventListener<T0>>();

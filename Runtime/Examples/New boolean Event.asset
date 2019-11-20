@@ -3,13 +3,14 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0f2f6a477f7447b3902ad4e3636893e, type: 3}
-  m_Name: Int Event example 0
+  m_Script: {fileID: 11500000, guid: 50e7d1ee62f5f48cfb341c9fd7bec332, type: 3}
+  m_Name: New boolean Event
   m_EditorClassIdentifier: 
   memo: 
   parameterToSend: 0

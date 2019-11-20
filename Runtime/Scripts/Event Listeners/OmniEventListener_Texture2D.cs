@@ -16,7 +16,7 @@ namespace NGC6543.OmniEvents
 		
 		protected override void OverrideGenericEvents()
 		{
-			base.genericGameEvents_1param = _omniEvent_Tex2D;
+			base.genericOmniEvents_1param = _omniEvent_Tex2D;
 			base.genericUnityEvent_1param = _invoked;
 		}
 	}	

@@ -22,9 +22,7 @@ namespace NGC6543.OmniEvents
 	}
 	
 	public abstract class OmniEventInvoker<T> : OmniEventInvoker
-	{
-		[Header("The events above won't be invoked!!")]
-		
+	{	
 		[SerializeField] T _parameterToSend;
 
 		protected OmniEvent<T>[] _genericEvents;

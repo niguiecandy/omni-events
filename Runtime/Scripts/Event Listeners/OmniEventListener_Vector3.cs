@@ -13,7 +13,7 @@ namespace NGC6543.OmniEvents
 
 		protected override void OverrideGenericEvents()
 		{
-			genericGameEvents_1param = _omniEvent_Vector3;
+			genericOmniEvents_1param = _omniEvent_Vector3;
 			genericUnityEvent_1param = _invoked;
 		}
 	}
