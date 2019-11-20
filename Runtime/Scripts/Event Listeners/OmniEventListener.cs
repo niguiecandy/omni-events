@@ -9,7 +9,7 @@ namespace NGC6543.OmniEvents
 	public class OmniEventListener : MonoBehaviour
 	{
 		//#if UNITY_EDITOR	//UNDONE this can cause Deserialization error!!
-		[SerializeField] string memo = "New Listener";
+		[SerializeField, TextArea(3, 6)] string memo = "New Listener";
 		//#endif
 		[SerializeField] OmniEvent[] omniEvents;
 		[SerializeField] bool receiveInvocationWhenDisabled = false;
@@ -68,7 +68,7 @@ namespace NGC6543.OmniEvents
 	public abstract class OmniEventListener<T0> : MonoBehaviour
 	{
 		//#if UNITY_EDITOR	//UNDONE this can cause Deserialization error!!
-		[SerializeField] string memo = "New " + typeof(T0).ToString() + " Listener";
+		[SerializeField, TextArea(3, 6)] string memo = "New " + typeof(T0).ToString() + " Listener";
 		//#endif
 
 		/// <summary>

@@ -26,9 +26,12 @@ namespace NGC6543.OmniEvents
 	[CustomEditor(typeof(OmniEventInvoker<>), true)]
 	public class GenericOmniEventInvokerEditor : Editor
 	{
+		// Excludes unnecessary field in base class.
+		string[] excludedProperties = {"_events"};
+		
 		public override void OnInspectorGUI()
 		{
-			base.OnInspectorGUI();
+			DrawPropertiesExcluding(serializedObject, excludedProperties);
 			
 			EditorGUILayout.Space();
 			GUI.backgroundColor = new Color(0.1f, 1f, 0.3f);
