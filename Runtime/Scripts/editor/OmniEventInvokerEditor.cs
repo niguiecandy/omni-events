@@ -31,7 +31,9 @@ namespace NGC6543.OmniEvents
 		
 		public override void OnInspectorGUI()
 		{
+			serializedObject.Update();
 			DrawPropertiesExcluding(serializedObject, excludedProperties);
+			serializedObject.ApplyModifiedProperties();
 			
 			EditorGUILayout.Space();
 			GUI.backgroundColor = new Color(0.1f, 1f, 0.3f);
