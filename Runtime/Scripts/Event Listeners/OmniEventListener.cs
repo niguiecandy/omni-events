@@ -74,7 +74,7 @@ namespace NGC6543.OmniEvents
 		/// <summary>
 		/// Override this on OverrideParam1GameEvent()
 		/// </summary>
-		protected OmniEvent<T0>[] genericGameEvents_1param;
+		protected OmniEvent<T0>[] genericOmniEvents_1param;
 
 		/// <summary>
 		/// If true, the event will be invoked even if this gameobject is inactive.
@@ -104,12 +104,12 @@ namespace NGC6543.OmniEvents
 
 		private void OnEnable()
 		{
-			if (!isRegistered && genericGameEvents_1param != null)
+			if (!isRegistered && genericOmniEvents_1param != null)
 			{
-				for (int i = 0; i < genericGameEvents_1param.Length; i++)
+				for (int i = 0; i < genericOmniEvents_1param.Length; i++)
 				{
-					if (genericGameEvents_1param[i] == null) continue;
-					genericGameEvents_1param[i].RegisterListener(this);
+					if (genericOmniEvents_1param[i] == null) continue;
+					genericOmniEvents_1param[i].RegisterListener(this);
 				}
 				isRegistered = true;
 			}
@@ -117,12 +117,12 @@ namespace NGC6543.OmniEvents
 
 		private void OnDisable()
 		{
-			if (isRegistered && genericGameEvents_1param != null && !receiveInvocationWhenDisabled)
+			if (isRegistered && genericOmniEvents_1param != null && !receiveInvocationWhenDisabled)
 			{
-				for (int i = 0; i < genericGameEvents_1param.Length; i++)
+				for (int i = 0; i < genericOmniEvents_1param.Length; i++)
 				{
-					if (genericGameEvents_1param[i] == null) continue;
-					genericGameEvents_1param[i].UnregisterListener(this);
+					if (genericOmniEvents_1param[i] == null) continue;
+					genericOmniEvents_1param[i].UnregisterListener(this);
 				}
 				isRegistered = false;
 			}
@@ -130,28 +130,28 @@ namespace NGC6543.OmniEvents
 
 		private void OnDestroy()
 		{
-			if (isRegistered && genericGameEvents_1param != null)
+			if (isRegistered && genericOmniEvents_1param != null)
 			{
-				for (int i = 0; i < genericGameEvents_1param.Length; i++)
+				for (int i = 0; i < genericOmniEvents_1param.Length; i++)
 				{
-					if (genericGameEvents_1param[i] == null) continue;
-					genericGameEvents_1param[i].UnregisterListener(this);
+					if (genericOmniEvents_1param[i] == null) continue;
+					genericOmniEvents_1param[i].UnregisterListener(this);
 				}
 			}
 		}
 
 		/// <summary>
-		/// Must override the GameEvent&lt;T0&gt; genericGameEvent_1param to its extended class.
+		/// Must override the OmniEvent&lt;T0&gt; genericOmniEvent_1param to its extended class.
 		/// Must override the UnityEvent&lt;T0&gt; genericUnityEvent_1param to its extended class.
 		/// </summary>
 		protected abstract void OverrideGenericEvents();
 
-		public void OnInvoked(T0 _t0)
+		public void OnInvoked(T0 parameter)
 		{
 			#if UNITY_EDITOR
-			receivedParameter = _t0;
+			receivedParameter = parameter;
 			#endif
-			genericUnityEvent_1param.Invoke(_t0);
+			genericUnityEvent_1param.Invoke(parameter);
 		}
 	}
 	
