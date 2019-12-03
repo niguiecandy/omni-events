@@ -1,6 +1,8 @@
 {
-    "name": "OmniEvents.Editor",
-    "references": [],
+    "name": "NGC6543.OmniEvents.Editor",
+    "references": [
+        "NGC6543.OmniEvents"
+    ],
     "optionalUnityReferences": [
         "TestAssemblies"
     ],
