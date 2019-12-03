@@ -1,12 +1,15 @@
 {
-    "name": "Runtime",
+    "name": "NGC6543.OmniEvents.Editor.Tests",
     "references": [
-        "OmniEvents.Runtime"
+        "NGC6543.OmniEvents.Editor",
+        "NGC6543.OmniEvents"
     ],
     "optionalUnityReferences": [
         "TestAssemblies"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
