@@ -23,7 +23,7 @@ This repo can be imported to your project as a submodule. In Unity, This will be
 	```json
 	"dependencies": {
 		...
-		"com.ngc6543.omnievents": "0.1.0"
+		"com.ngc6543.omnievents": "0.2.1"
 	}
 	```
 
