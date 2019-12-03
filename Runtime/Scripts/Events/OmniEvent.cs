@@ -10,7 +10,7 @@ namespace NGC6543.OmniEvents
 {
 	//------------------------------------------------ Event without a parameter
 	
-	[CreateAssetMenu(menuName = OmniEvent.menuPath + "No Parameter", fileName = "New Omni Event.asset")]
+	[CreateAssetMenu(menuName = OmniEvent.menuPath + "No Parameter", fileName = "New Omni Event.asset", order = -99)]
 	public class OmniEvent : ScriptableObject
 	{
 		public const string menuPath = "Omni Events/";
