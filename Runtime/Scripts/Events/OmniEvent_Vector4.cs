@@ -4,6 +4,6 @@ using UnityEngine;
 
 namespace NGC6543.OmniEvents
 {
-	[CreateAssetMenu(menuName = OmniEvent.menuPath + "Vector4", fileName = "New Vector4 Event.asset")]
+	[CreateAssetMenu(menuName = OmniEvent.menuPath + "Vector4", fileName = "New Vector4 Event.asset", order = 9)]
 	public class OmniEvent_Vector4: OmniEvent<Vector4> {}
 }
