@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.2] - 2019-12-06
+### Changed
+- Re-order menu context buttons.
+
 ## [0.2.1] - 2019-12-03
 ### Fixed
 - Moved editor scripts from 'Runtime' folder to 'Editor' folder.
