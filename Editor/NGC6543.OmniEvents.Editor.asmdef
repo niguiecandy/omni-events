@@ -1,10 +1,7 @@
 {
     "name": "NGC6543.OmniEvents.Editor",
     "references": [
-        "NGC6543.OmniEvents"
-    ],
-    "optionalUnityReferences": [
-        "TestAssemblies"
+        "GUID:ae5d27eb535b842aa93393969b7e8223"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -12,5 +9,6 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": []
+    "defineConstraints": [],
+    "versionDefines": []
 }
