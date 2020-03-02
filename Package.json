@@ -1,6 +1,6 @@
 {
 	"name": "com.ngc6543.omnievents",
-	"version": "0.2.4",
+	"version": "0.3.0",
 	"displayName": "Omni Events",
 	"description": "ScriptableObject Events for Unity",
 	"unity": "2017.1",
