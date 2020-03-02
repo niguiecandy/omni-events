@@ -5,12 +5,12 @@ This is an Event System that is implementing ['Observer Pattern'](https://en.wik
 
 > Ref : [3 cool ways to architect your game with Scriptable Objects](https://unity3d.com/kr/how-to/architect-with-Scriptable-Objects?utm_campaign=saas_global_nurture_2018-Paid-subs-CLC-Monthly&utm_content=2018-CLC-Monthly-programmer-architect-with-Scriptable-Objects-v2&utm_medium=email&utm_source=Eloqua)
 
-You can create an event 'asset' in the project folder, and reference it from any GameObjects in any Scenes. This is especially useful if you want to connect UIs and GameObject instances throughout the scenes.
+You can create event 'asset's in the project folder, and reference it from any GameObjects in any Scenes. This is especially useful if you want to connect UIs and GameObject instances throughout the scenes.
 
 This pattern has the following advantages :
 1. **Modular**  No direct references are needed between GameObject instances. This makes GameObjects easy to be saved as prefabs.
 2. **Editable** Change in one script doesn't affect others.
-3. **Debuggable** Modulized scripts are easy to be debugged.
+3. **Debuggable** Modularized scripts are easy to be debugged.
 
 This is a **Plus**
 
@@ -18,14 +18,8 @@ This is a **Plus**
 
 ## Import
 This repo can be imported to your project as a submodule. In Unity, This will be treated as a custom package.
-1. Add this repo as a submodule of your project. Clone at `YourProject/Packages/Omni-Events`.
-2. Open `YourProject/Packages/manifest.json` file, and add **"com.ngc6543.omnievents"** at the end of the "dependencies".
-	```json
-	"dependencies": {
-		...
-		"com.ngc6543.omnievents": "0.2.1"
-	}
-	```
+- Add this repo as a submodule to your project. Clone at `YourProject/Packages/Omni-Events`.
+- If you are not familiar with submodule, just download the project from 'master' branch, and copy it into `YourProject/Packages/Omni-Events` folder.
 
 ## Usage
 1. OmniEvent Assets

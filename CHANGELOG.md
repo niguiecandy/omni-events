@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0 - 2019-03-02
+### Changed
+- Add markdown extension to license file.
+- Add inspector button to trigger event.
+
 ## [0.2.4] - 2019-12-12
 ## Fixed
 - Fixed Editor asmdef platform error. Set it to Editor only.
