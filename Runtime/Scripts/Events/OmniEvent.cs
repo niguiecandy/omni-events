@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -16,25 +17,26 @@ namespace NGC6543.OmniEvents
 		public const string menuPath = "Omni Events/";
 		
 		//#if UNITY_EDITOR	//UNDONE this can cause Deserialization error!!
-		[SerializeField, TextArea(3, 6)] string memo;
+		[FormerlySerializedAs("memo")]
+		[SerializeField, TextArea(3, 6)] string _memo;
 		//#endif
-		List<OmniEventListener> listeners = new List<OmniEventListener>();
+		List<OmniEventListener> _listeners = new List<OmniEventListener>();
 
-		public void RegisterListener(OmniEventListener _listener)
+		public void RegisterListener(OmniEventListener listener)
 		{
-			listeners.Add(_listener);
+			_listeners.Add(listener);
 		}
 		
-		public void UnregisterListener(OmniEventListener _listener)
+		public void UnregisterListener(OmniEventListener listener)
 		{
-			listeners.Remove(_listener);
+			_listeners.Remove(listener);
 		}
 		
 		public void Invoke()
 		{
-			for (int i = 0; i < listeners.Count; i++)
+			for (int i = 0; i < _listeners.Count; i++)
 			{
-				listeners[i].OnInvoked();
+				_listeners[i].OnInvoked();
 			}
 		}
 	}
@@ -44,29 +46,30 @@ namespace NGC6543.OmniEvents
 	public abstract class OmniEvent<T0> : ScriptableObject
 	{
 		//#if UNITY_EDITOR	//UNDONE this can cause Deserialization error!!
-		[SerializeField, TextArea(3, 6)] string memo;
-		[SerializeField] protected T0 parameterToSend;
+		[FormerlySerializedAs("memo")]
+		[SerializeField, TextArea(3, 6)] string _memo;
+		[SerializeField] protected T0 _parameterToSend;
 		//#endif
-		List<OmniEventListener<T0>> listeners = new List<OmniEventListener<T0>>();
+		List<OmniEventListener<T0>> _listeners = new List<OmniEventListener<T0>>();
 
-		public void RegisterListener(OmniEventListener<T0> _listener)
+		public void RegisterListener(OmniEventListener<T0> listener)
 		{
-			listeners.Add(_listener);
+			_listeners.Add(listener);
 		}
 
-		public void UnregisterListener(OmniEventListener<T0> _listener)
+		public void UnregisterListener(OmniEventListener<T0> listener)
 		{
-			listeners.Remove(_listener);
+			_listeners.Remove(listener);
 		}
 
-		public void Invoke(T0 _t0)
+		public void Invoke(T0 t0)
 		{
 			#if UNITY_EDITOR
-			parameterToSend = _t0;
+			_parameterToSend = t0;
 			#endif
-			for (int i = 0; i < listeners.Count; i++)
+			for (int i = 0; i < _listeners.Count; i++)
 			{
-				listeners[i].OnInvoked(_t0);
+				_listeners[i].OnInvoked(t0);
 			}
 		}
 	}
