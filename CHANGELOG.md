@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.3.0 - 2019-03-02
+## [0.3.1] - 2020-05-15
+### Changed
+- Fixed mamber variable name inconsistency.
+
+## [0.3.0] - 2020-03-02
 ### Changed
 - Add markdown extension to license file.
 - Add inspector button to trigger event.
