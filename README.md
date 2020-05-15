@@ -19,7 +19,15 @@ This is a **Plus**
 ## Import
 This repo can be imported to your project as a submodule. In Unity, This will be treated as a custom package.
 - Add this repo as a submodule to your project. Clone at `YourProject/Packages/Omni-Events`.
-- If you are not familiar with submodule, just download the project from 'master' branch, and copy it into `YourProject/Packages/Omni-Events` folder.
+If you are not familiar with submodule, modify `YourProject/Packages/manifest.json` file as follows :
+```
+	"dependencies": {
+		...
+		"com.ngc6543.omnievents": "https://github.com/niguiecandy/omni-events.git",
+		...
+  },
+  ```
+
 
 ## Usage
 1. OmniEvent Assets
